@@ -42,7 +42,7 @@ while True:
                 label = f"{class_labels[class_id]}: {confidence:.2f}"
                 color = class_colors[class_id]
                 cv2.rectangle(frame, (x, y), (x + width, y + height), color, 2)
-                cv2.putText(frame, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+                cv2.putText(frame, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
 
     cv2.imshow('YOLO Object Detection', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
